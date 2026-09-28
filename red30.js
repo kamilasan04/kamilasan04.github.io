@@ -1,0 +1,14 @@
+const financial=[
+{year:2014,revenue:914835,net:38322.11,assets:303867.7246},{year:2015,revenue:917929,net:25375.59,assets:325834.142},{year:2016,revenue:952348,net:31026.46,assets:350461.4376},{year:2017,revenue:985671,net:45097.94,assets:387242.726},{year:2018,revenue:1013072,net:48615.81,assets:423068.5126}];
+const regions=[["Central East",334153.118],["N Central East",332144.17],["Northeast",302663.23],["S Central East",283748.544],["Southeast",271534.282],["Southwest",193069.562],["S Central West",120095.878],["Northwest",100785.372],["N Central West",60550]];
+const products=[["Robots",457827],["Drones",441659.2],["Robot Kits",364238.4],["Drone Kits",265972.49],["Training Videos",229616.496],["eBooks",181768.362],["Blueprints",57662.208]];
+const orders=[["Wholesale",1651927.976,2833],["Retail",346816.18,2143]];
+const root=document.getElementById("redViz");const money=n=>"$"+(n/1000).toFixed(1)+"K";
+function bars(data){const max=Math.max(...data.map(x=>x[1]));return data.map(x=>'<div class="m-row"><div class="m-label"><b>'+x[0]+'</b></div><div class="m-track"><i style="width:'+(x[1]/max*100)+'%"></i></div><strong>'+money(x[1])+'</strong></div>').join("")}
+function render(v){
+if(v==="financial"){root.innerHTML='<div class="m-control"><label>Metric <select id="finMetric"><option value="revenue">Gross revenue</option><option value="net">Net income</option><option value="assets">Total assets</option></select></label></div><div id="finBars"></div><p class="m-caption">Financial-statement values are reported in US dollars, thousands.</p>';const draw=()=>{const k=document.getElementById("finMetric").value,d=financial.map(x=>[String(x.year),x[k]]);document.getElementById("finBars").innerHTML=bars(d)};document.getElementById("finMetric").addEventListener("change",draw);draw()}
+if(v==="regions")root.innerHTML='<div class="red-kpi"><span>2017–2018 SALES</span><b>$2.00M</b><small>4,976 transactions</small></div>'+bars(regions)+'<p class="m-caption">Central East recorded the highest order total in the transaction dataset.</p>';
+if(v==="products")root.innerHTML=bars(products)+'<p class="m-caption">Robots and Drones were the two highest-revenue product categories.</p>';
+if(v==="orders"){const total=orders.reduce((a,x)=>a+x[1],0);root.innerHTML='<div class="m-kpis"><div><span>WHOLESALE</span><b>'+(orders[0][1]/total*100).toFixed(1)+'%</b><small>2,833 transactions</small></div><div><span>RETAIL</span><b>'+(orders[1][1]/total*100).toFixed(1)+'%</b><small>2,143 transactions</small></div><div><span>TOTAL SALES</span><b>$2.00M</b><small>2017–2018</small></div></div><p class="m-caption">Wholesale orders generated the majority of sales value in the dataset.</p>'}
+}
+document.querySelectorAll("[data-red]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-red]").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.red)}));render("financial");
