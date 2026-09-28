@@ -22,3 +22,6 @@
 
 /* Warby Parker case study */
 .warby-dashboard{border:1px solid var(--ink);margin-top:38px}.warby-split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}.warby-split>div{padding:30px}.warby-split>div:first-child{border-right:1px solid var(--ink)}.warby-split span{font-size:10px;letter-spacing:.12em}.warby-split b{display:block;font-size:26px;margin:10px 0}.warby-split p{font-size:13px;line-height:1.5;opacity:.7}@media(max-width:700px){.warby-split{grid-template-columns:1fr}.warby-split>div:first-child{border-right:0;border-bottom:1px solid var(--ink)}}
+
+/* Client outreach tracker */
+.tracker-demo{border:1px solid var(--ink);margin-top:38px}.tracker-controls{display:flex;flex-wrap:wrap;border-bottom:1px solid var(--ink)}.tracker-demo #trackerKpis{padding:28px 28px 0}.tracker-table-wrap{overflow-x:auto;padding:28px}.tracker-table{width:100%;border-collapse:collapse;min-width:720px}.tracker-table th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:12px;border-bottom:1px solid var(--ink)}.tracker-table td{padding:16px 12px;border-bottom:1px solid rgba(24,24,23,.25);font-size:13px}.confidence{display:inline-block;border:1px solid var(--ink);padding:5px 8px}.c4,.c5{background:var(--sage)}.c3{background:var(--cream)}.c1,.c2{background:var(--clay)}
