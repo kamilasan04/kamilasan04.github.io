@@ -19,3 +19,6 @@
 
 /* Red30 interactive case study */
 .red-dashboard{border:1px solid var(--ink);margin-top:38px}.red-kpi{border-bottom:1px solid var(--ink);padding:0 0 28px;margin-bottom:28px}.red-kpi span{font-size:10px;letter-spacing:.12em}.red-kpi b{display:block;font-size:clamp(42px,6vw,76px);letter-spacing:-.05em;margin:8px 0}.red-kpi small{opacity:.65}.red-dashboard .m-track i{background:var(--clay)}
+
+/* Warby Parker case study */
+.warby-dashboard{border:1px solid var(--ink);margin-top:38px}.warby-split{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink)}.warby-split>div{padding:30px}.warby-split>div:first-child{border-right:1px solid var(--ink)}.warby-split span{font-size:10px;letter-spacing:.12em}.warby-split b{display:block;font-size:26px;margin:10px 0}.warby-split p{font-size:13px;line-height:1.5;opacity:.7}@media(max-width:700px){.warby-split{grid-template-columns:1fr}.warby-split>div:first-child{border-right:0;border-bottom:1px solid var(--ink)}}
