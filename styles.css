@@ -31,3 +31,5 @@
 
 /* Embedded original portfolio documents */
 .pdf-frame{margin-top:28px;border:1px solid var(--ink);background:#fff;height:min(78vh,900px);overflow:hidden}.pdf-frame iframe{width:100%;height:100%;border:0;display:block}.pdf-frame.landscape{height:min(70vh,720px)}.doc-open{display:inline-block;margin-top:14px;border-bottom:1px solid var(--ink);padding-bottom:3px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}.document-showcase{display:grid;gap:50px;margin-top:34px}.document-showcase h3{font-size:24px;margin:0 0 12px}@media(max-width:700px){.pdf-frame{height:600px}.pdf-frame.landscape{height:420px}}
+
+.about-headshot{display:block;width:100%;max-width:380px;height:auto;margin-top:24px;}
